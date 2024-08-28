@@ -36,19 +36,5 @@ class AuthController extends Controller
             'message' => 'Login successful',
         ], 200);
     }
-    public function logout(Request $request)
-    {
-        try {
-            // Mengambil token dari header Authorization
-            $token = $request->bearerToken();
 
-            // Menyimpan token yang dicabut ke dalam blacklist jika Anda menggunakan JWT blacklist
-            JWTAuth::setToken($token)->invalidate();
-
-            // Kembalikan respons sukses
-            return response()->json(['message' => 'Logout berhasil'], 200);
-        } catch (\Exception $e) {
-            return response()->json(['message' => 'Logout gagal', 'error' => $e->getMessage()], 500);
-        }
-    }
 }
