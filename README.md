@@ -54,6 +54,14 @@ php artisan serve
 Untuk informasi lengkap mengenai cara menggunakan API, silakan import file ApiLaravelBackendTest.postman_collection tautan di bawah ini untuk mengakses dokumentasi API dengan postman
 
 
+##  Image db diagram
+
+![Screenshot](http://localhost:8000/dbdiagram.png)
+
+
+
+
+
 
 
 
