@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "e10d1210-effd-44d3-8b23-aa582a431881",
+		"name": "ApiLaravelBackendTest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30503825"
+	},
+	"item": [
+		{
+			"name": "Kelola Users",
+			"item": [
+				{
+					"name": "Tambah User",
+					"item": [
+						{
+							"name": "http://127.0.0.1:8000/api/users",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"saeful\",\r\n    \"email\": \"saeful@example.com\",\r\n    \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentFile ini berisi endpoint API untuk menambah pengguna baru. Gunakan untuk mengirimkan data pengguna seperti nama, email, dan password untuk membuat akun baru.EndFragment"
+				},
+				{
+					"name": "Hapus User Dan Postingan",
+					"item": [
+						{
+							"name": "http://localhost:8000/api/users/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI0ODIxNzE5LCJleHAiOjE3MjQ4MjUzMTksIm5iZiI6MTcyNDgyMTcxOSwianRpIjoiWUdldGlKcE9xTTJFWDNzSyIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yp0gNyvVrVg78E2SIw6OVGgluRuXkzcQfNCE5GmwcWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Pengertian HTML Tag\",\r\n    \"body\": \"Tag HTML adalah elemen dasar yang digunakan untuk membangun struktur dan format konten di halaman web.Bayangkan kamu sedang membaca sebuah buku. Ada judul, paragraf, gambar, dan mungkin juga kutipan di dalamnya. Di dunia web, setiap komponen tersebut direpresentasikan dengan tag HTML tertentu.Sebagai contoh, judul direpresentasikan dengan tag < h1 > sampai < h6 >, sementara paragraf dengan tag < p >. Ada banyak juga tag lainnya yang membantu kita mengatur dan menampilkan konten web lebih rapi.\",\r\n    \"user_id\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentFile ini berisi endpoint API untuk menghapus pengguna serta semua postingan yang terkait dengan pengguna tersebut. Gunakan untuk menghapus data pengguna secara menyeluruh dari sistem, termasuk postingan yang dimiliki pengguna.EndFragment"
+				}
+			],
+			"description": "StartFragmentFile ini berisi endpoint API untuk mengelola data pengguna, termasuk menambah, mendapatkan, dan menghapus pengguna. Gunakan untuk melakukan operasi CRUD pada data pengguna dalam sistem.EndFragment"
+		},
+		{
+			"name": "Kelola Posts",
+			"item": [
+				{
+					"name": "Tambah Post",
+					"item": [
+						{
+							"name": "http://127.0.0.1:8000/api/posts",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI0ODIxNzE5LCJleHAiOjE3MjQ4MjUzMTksIm5iZiI6MTcyNDgyMTcxOSwianRpIjoiWUdldGlKcE9xTTJFWDNzSyIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yp0gNyvVrVg78E2SIw6OVGgluRuXkzcQfNCE5GmwcWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Pengertian HTML Tag\",\r\n    \"body\": \"Tag HTML adalah elemen dasar yang digunakan untuk membangun struktur dan format konten di halaman web.Bayangkan kamu sedang membaca sebuah buku. Ada judul, paragraf, gambar, dan mungkin juga kutipan di dalamnya. Di dunia web, setiap komponen tersebut direpresentasikan dengan tag HTML tertentu.Sebagai contoh, judul direpresentasikan dengan tag < h1 > sampai < h6 >, sementara paragraf dengan tag < p >. Ada banyak juga tag lainnya yang membantu kita mengatur dan menampilkan konten web lebih rapi.\",\r\n    \"user_id\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/posts",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentEndpoint untuk menambahkan postingan baru ke sistem dengan data yang diberikan seperti judul, isi, dan ID pengguna.EndFragment"
+				},
+				{
+					"name": "Mendapatkan Semua Post",
+					"item": [
+						{
+							"name": "http://localhost:8000/api/posts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI0ODIxNzE5LCJleHAiOjE3MjQ4MjUzMTksIm5iZiI6MTcyNDgyMTcxOSwianRpIjoiWUdldGlKcE9xTTJFWDNzSyIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yp0gNyvVrVg78E2SIw6OVGgluRuXkzcQfNCE5GmwcWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentEndpoint untuk mendapatkan daftar semua postingan. Dapat digunakan untuk menampilkan seluruh postingan yang ada dalam sistem.EndFragment"
+				},
+				{
+					"name": "Mendapatkan Post Sesuai User_id",
+					"item": [
+						{
+							"name": "http://localhost:8000/api/users/{id}/posts",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI0ODIxNzE5LCJleHAiOjE3MjQ4MjUzMTksIm5iZiI6MTcyNDgyMTcxOSwianRpIjoiWUdldGlKcE9xTTJFWDNzSyIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yp0gNyvVrVg78E2SIw6OVGgluRuXkzcQfNCE5GmwcWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Pengertian HTML Tag\",\r\n    \"body\": \"Tag HTML adalah elemen dasar yang digunakan untuk membangun struktur dan format konten di halaman web.Bayangkan kamu sedang membaca sebuah buku. Ada judul, paragraf, gambar, dan mungkin juga kutipan di dalamnya. Di dunia web, setiap komponen tersebut direpresentasikan dengan tag HTML tertentu.Sebagai contoh, judul direpresentasikan dengan tag < h1 > sampai < h6 >, sementara paragraf dengan tag < p >. Ada banyak juga tag lainnya yang membantu kita mengatur dan menampilkan konten web lebih rapi.\",\r\n    \"user_id\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/users/6/posts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"6",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentEndpoint untuk mendapatkan semua postingan yang dibuat oleh pengguna tertentu berdasarkan ID pengguna.EndFragment"
+				},
+				{
+					"name": "Post Berdasarkan Judul",
+					"item": [
+						{
+							"name": "http://localhost:8000/api/posts?search={Judul}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI0ODIxNzE5LCJleHAiOjE3MjQ4MjUzMTksIm5iZiI6MTcyNDgyMTcxOSwianRpIjoiWUdldGlKcE9xTTJFWDNzSyIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yp0gNyvVrVg78E2SIw6OVGgluRuXkzcQfNCE5GmwcWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Pengertian HTML Tag\",\r\n    \"body\": \"Tag HTML adalah elemen dasar yang digunakan untuk membangun struktur dan format konten di halaman web.Bayangkan kamu sedang membaca sebuah buku. Ada judul, paragraf, gambar, dan mungkin juga kutipan di dalamnya. Di dunia web, setiap komponen tersebut direpresentasikan dengan tag HTML tertentu.Sebagai contoh, judul direpresentasikan dengan tag < h1 > sampai < h6 >, sementara paragraf dengan tag < p >. Ada banyak juga tag lainnya yang membantu kita mengatur dan menampilkan konten web lebih rapi.\",\r\n    \"user_id\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/posts?search=html",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"posts"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "html"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentEndpoint untuk mencari dan mendapatkan postingan berdasarkan judul. Gunakan parameter pencarian untuk menemukan postingan dengan judul yang sesuai.EndFragment"
+				},
+				{
+					"name": "Post Berdasarkan Pages dan Limit",
+					"item": [
+						{
+							"name": "http://localhost:8000/api/posts?page={page( jumlah halaman)}&limit={limit(jumlah post dalam 1 page)}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI0ODIxNzE5LCJleHAiOjE3MjQ4MjUzMTksIm5iZiI6MTcyNDgyMTcxOSwianRpIjoiWUdldGlKcE9xTTJFWDNzSyIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yp0gNyvVrVg78E2SIw6OVGgluRuXkzcQfNCE5GmwcWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Pengertian HTML Tag\",\r\n    \"body\": \"Tag HTML adalah elemen dasar yang digunakan untuk membangun struktur dan format konten di halaman web.Bayangkan kamu sedang membaca sebuah buku. Ada judul, paragraf, gambar, dan mungkin juga kutipan di dalamnya. Di dunia web, setiap komponen tersebut direpresentasikan dengan tag HTML tertentu.Sebagai contoh, judul direpresentasikan dengan tag < h1 > sampai < h6 >, sementara paragraf dengan tag < p >. Ada banyak juga tag lainnya yang membantu kita mengatur dan menampilkan konten web lebih rapi.\",\r\n    \"user_id\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "GET http://localhost:8000/api/users/6/posts",
+									"protocol": "GET http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"6",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentEndpoint untuk mendapatkan daftar postingan dengan paginasi. Gunakan parameter `page` dan `limit` untuk menentukan halaman dan jumlah postingan per halaman.EndFragment"
+				},
+				{
+					"name": "Post Berdasarkan Judul, Pages dan Limit",
+					"item": [
+						{
+							"name": "http://localhost:8000/api/posts?search={judul(kata kunci)}&page={page( jumlah halaman)}&limit={limit(jumlah post dalam 1 page)}",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI0ODIxNzE5LCJleHAiOjE3MjQ4MjUzMTksIm5iZiI6MTcyNDgyMTcxOSwianRpIjoiWUdldGlKcE9xTTJFWDNzSyIsInN1YiI6IjYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Yp0gNyvVrVg78E2SIw6OVGgluRuXkzcQfNCE5GmwcWQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\": \"Pengertian HTML Tag\",\r\n    \"body\": \"Tag HTML adalah elemen dasar yang digunakan untuk membangun struktur dan format konten di halaman web.Bayangkan kamu sedang membaca sebuah buku. Ada judul, paragraf, gambar, dan mungkin juga kutipan di dalamnya. Di dunia web, setiap komponen tersebut direpresentasikan dengan tag HTML tertentu.Sebagai contoh, judul direpresentasikan dengan tag < h1 > sampai < h6 >, sementara paragraf dengan tag < p >. Ada banyak juga tag lainnya yang membantu kita mengatur dan menampilkan konten web lebih rapi.\",\r\n    \"user_id\": 6\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "GET http://localhost:8000/api/users/6/posts",
+									"protocol": "GET http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users",
+										"6",
+										"posts"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentEndpoint untuk mencari postingan berdasarkan judul dan mendapatkan hasilnya dengan paginasi. Gunakan parameter `search` untuk judul, `page` untuk halaman, dan `limit` untuk jumlah postingan per halaman.EndFragment"
+				}
+			],
+			"description": "StartFragmentFile ini berisi endpoint API untuk mengelola postingan, termasuk menambah, mendapatkan, dan mencari postingan berdasarkan berbagai kriteria.EndFragment"
+		},
+		{
+			"name": "Autentikasi dan Otorisasi",
+			"item": [
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "http://127.0.0.1:8000/api/login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"saeful\",\r\n    \"email\": \"saeful@example.com\",\r\n    \"password\": \"password123\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/users",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "StartFragmentEndpoint ini digunakan untuk autentikasi pengguna dengan menggunakan email dan password. Setelah berhasil login, pengguna akan menerima token JWT yang dapat digunakan untuk mengakses endpoint API yang dilindungi. Gunakan endpoint ini untuk mendapatkan token yang diperlukan untuk autentikasi di API.EndFragment"
+				}
+			],
+			"description": "StartFragmentEndpoint untuk autentikasi pengguna dengan email dan password. Endpoint ini digunakan untuk menghasilkan token JWT yang harus digunakan untuk akses ke API yang dilindungi. Berikan email dan password dalam permintaan untuk mendapatkan token autentikasi.EndFragment"
+		}
+	]
+}
