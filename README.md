@@ -56,7 +56,8 @@ Untuk informasi lengkap mengenai cara menggunakan API, silakan import file ApiLa
 
 ##  Image db diagram
 
-![Logo](https://drive.google.com/file/d/1tzg1AT4ALyIu-8k6R31epTaGAPqGr8Sd/view?usp=sharing)
+![Tampilan Aplikasi](https://drive.google.com/uc?export=view&id=1tzg1AT4ALyIu-8k6R31epTaGAPqGr8Sd)
+
 
 
 
